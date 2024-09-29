@@ -18,7 +18,7 @@ void fun3(int &v) {
 }
 
 void fun4(int *v) {
-    cout << "&v in fun3(deref): " << &v << "\n";
+    cout << "&v in fun4(deref): " << &v << "\n";
 }
 
 int main() {

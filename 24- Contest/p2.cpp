@@ -5,18 +5,16 @@ int main() {
     // Write your code here
     int tc; scanf("%d\n", &tc);
     while (tc--) {
-        string str, word; getline(cin, str);
+        string str, word, ans; getline(cin, str);
         stringstream strm(str); map<string, int> m;
+        int mx = INT_MIN; word = "";
         while (strm >> word) {
             m[word]++;
-        }
-        int mx = INT_MIN; word = "";
-        for (auto it = m.begin(); it != m.end(); it++) {
-            if (it->second > mx) {
-                mx = it->second; word = it->first;
+            if (m[word] > mx) {
+                mx = m[word]; ans = word;
             }
         }
-        cout << m["Ratul"];
+        cout << ans << " " << mx << endl;
     }
     return 0;
 }
